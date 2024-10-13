@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IranKish.UrlShortener.Persistance.Ef\IranKish.UrlShortener.Persistance.Ef.csproj" />
+    <ProjectReference Include="..\IranKish.UrlShortener.ServiceImplementations\IranKish.UrlShortener.ServiceImplementations.csproj" />
   </ItemGroup>
 
 </Project>

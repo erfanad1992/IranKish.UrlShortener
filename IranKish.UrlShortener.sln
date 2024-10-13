@@ -7,17 +7,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{89FD59F4-9B1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{69B40316-A905-4514-96E5-E9C23A5B2263}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IranKish.UrlShortener.Domain", "IranKish.UrlShortener.Domain\IranKish.UrlShortener.Domain.csproj", "{D7AA5FB3-E299-4EB2-984D-D5A512BB9D63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IranKish.UrlShortener.Domain", "IranKish.UrlShortener.Domain\IranKish.UrlShortener.Domain.csproj", "{D7AA5FB3-E299-4EB2-984D-D5A512BB9D63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IranKish.UrlShortener.Services", "IranKish.UrlShortener.Services\IranKish.UrlShortener.Services.csproj", "{E5A019A1-BF3E-47DF-8602-2647C96E176C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IranKish.UrlShortener.Services", "IranKish.UrlShortener.Services\IranKish.UrlShortener.Services.csproj", "{E5A019A1-BF3E-47DF-8602-2647C96E176C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4C47D780-0C88-4CEB-A758-EFBD1CCE85E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AC3150A6-494D-4ABE-B409-1F31498C1D2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IranKish.UrlShortener.Endpoints.WebApi", "IranKish.UrlShortener.Endpoints.WebApi\IranKish.UrlShortener.Endpoints.WebApi.csproj", "{4D126F82-B5F1-48C2-B591-CD7B532E1F44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IranKish.UrlShortener.Endpoints.WebApi", "IranKish.UrlShortener.Endpoints.WebApi\IranKish.UrlShortener.Endpoints.WebApi.csproj", "{4D126F82-B5F1-48C2-B591-CD7B532E1F44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IranKish.UrlShortener.Persistance.Ef", "IranKish.UrlShortener.Persistance.Ef\IranKish.UrlShortener.Persistance.Ef.csproj", "{F45A828C-F7CE-45DD-B500-98AADE9CBE9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IranKish.UrlShortener.Persistance.Ef", "IranKish.UrlShortener.Persistance.Ef\IranKish.UrlShortener.Persistance.Ef.csproj", "{F45A828C-F7CE-45DD-B500-98AADE9CBE9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IranKish.UrlShortener.ServiceImplementations", "IranKish.UrlShortener.ServiceImplementations\IranKish.UrlShortener.ServiceImplementations.csproj", "{B93F2207-7065-4FBF-8859-7EADCC4C063D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{F45A828C-F7CE-45DD-B500-98AADE9CBE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F45A828C-F7CE-45DD-B500-98AADE9CBE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F45A828C-F7CE-45DD-B500-98AADE9CBE9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93F2207-7065-4FBF-8859-7EADCC4C063D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93F2207-7065-4FBF-8859-7EADCC4C063D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93F2207-7065-4FBF-8859-7EADCC4C063D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93F2207-7065-4FBF-8859-7EADCC4C063D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{AC3150A6-494D-4ABE-B409-1F31498C1D2C} = {89FD59F4-9B1A-4F7D-BD95-05A52951701C}
 		{4D126F82-B5F1-48C2-B591-CD7B532E1F44} = {AC3150A6-494D-4ABE-B409-1F31498C1D2C}
 		{F45A828C-F7CE-45DD-B500-98AADE9CBE9C} = {4C47D780-0C88-4CEB-A758-EFBD1CCE85E7}
+		{B93F2207-7065-4FBF-8859-7EADCC4C063D} = {4C47D780-0C88-4CEB-A758-EFBD1CCE85E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA34BA83-6CEE-4215-AD8D-94A1B8EB29F2}

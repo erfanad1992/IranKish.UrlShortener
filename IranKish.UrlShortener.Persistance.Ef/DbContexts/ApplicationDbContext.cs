@@ -1,4 +1,4 @@
-﻿using IranKish.UrlShortener.Domain.Entities;
+﻿using IranKish.UrlShortener.Domain.Entities.UrlEntries;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 using System.Reflection.Emit;
@@ -22,6 +22,9 @@ namespace IranKish.UrlShortener.Persistance.Ef.DbContexts
             builder.Entity<UrlEntry>(entity =>
             {
                 entity.HasKey(e => e.Id);
+                entity.HasIndex(u => u.ShortUrlCode)
+                      .IsUnique();
+
                 entity.ToTable(nameof(UrlEntry));
             });
             base.OnModelCreating(builder);

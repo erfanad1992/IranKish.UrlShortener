@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IranKish.UrlShortener.Persistance.Ef\IranKish.UrlShortener.Persistance.Ef.csproj" />
+    <ProjectReference Include="..\IranKish.UrlShortener.Services\IranKish.UrlShortener.Services.csproj" />
+  </ItemGroup>
+
+</Project>
