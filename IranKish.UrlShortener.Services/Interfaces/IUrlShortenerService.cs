@@ -1,8 +1,11 @@
-﻿namespace IranKish.UrlShortener.Services.Interfaces
+﻿using IranKish.UrlShortener.Services.Dtos;
+using IranKish.UrlShortener.Services.Models;
+
+namespace IranKish.UrlShortener.Services.Interfaces
 {
     public interface IUrlShortenerService
     {
-        Task<string> ShortenUrlAsync(string originalUrl);
-        Task<string?> GetOriginalUrlAsync(string shortUrlCode);
+        Task<ShortenUrlResultDto> ShortenUrlAsync(ShortenUrlRequestDto requestDto);
+        Task<GetOriginalUrlResponseDto?> GetOriginalUrlAsync(string shortenedUrl);
     }
 }

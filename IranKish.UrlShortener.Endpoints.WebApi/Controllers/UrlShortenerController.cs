@@ -1,26 +1,39 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IranKish.UrlShortener.Domain.Entities.UrlEntries.Exceptions;
+using IranKish.UrlShortener.Endpoints.WebApi.ApiResponses;
+using IranKish.UrlShortener.Services.Dtos;
+using IranKish.UrlShortener.Services.Interfaces;
+using IranKish.UrlShortener.Services.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IranKish.UrlShortener.Endpoints.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UrlShortenerController
+    public class UrlShortenerController : ControllerBase
     {
-        [HttpPost]
-        public async Task<IActionResult> ShortenUrl([FromBody] string url)
+        private readonly IUrlShortenerService _urlShortenerService;
+
+        public UrlShortenerController(IUrlShortenerService urlShortenerService)
         {
-            var shortUrl = await _urlShortenerService.ShortenUrlAsync(url);
-            return Ok(new { ShortUrl = $"https://yourdomain.com/{shortUrl}" });
+            _urlShortenerService = urlShortenerService;
         }
 
-        [HttpGet("{shortUrlCode}")]
-        public async Task<IActionResult> RedirectToOriginalUrl(string shortUrlCode)
-        {
-            var originalUrl = await _urlShortenerService.GetOriginalUrlAsync(shortUrlCode);
-            if (originalUrl == null)
-                return NotFound();
+        [HttpPost]
+        public async Task<IActionResult> ShortenUrl([FromBody] ShortenUrlRequestDto requestDto)
+        { 
 
-            return Redirect(originalUrl);
+                var shortUrl = await _urlShortenerService.ShortenUrlAsync(requestDto);
+                return Ok(ApiResponse<ShortenUrlResultDto>.SuccessResponse(shortUrl));
+             
+
+        }
+
+        [HttpGet()]
+        public async Task<IActionResult> GetOriginalUrl([FromQuery] string shortenedUrl)
+        {
+                var originalUrl = await _urlShortenerService.GetOriginalUrlAsync(shortenedUrl);
+                return Ok(ApiResponse<GetOriginalUrlResponseDto>.SuccessResponse(originalUrl));
+            
         }
     }
 }

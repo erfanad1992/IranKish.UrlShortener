@@ -10,6 +10,7 @@ namespace IranKish.UrlShortener.ServiceImplementations.Extensions
         public static void AddImplementationServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<IUrlShortenerService, UrlShortenerService>();
+
         }
     }
 }
